@@ -6,6 +6,8 @@ const fs = require("fs");
 
 require("dotenv").config();
 
+const PORT = process.dotenv.PORT || 4000;
+
 const handlebars = require("handlebars");
 
 const nodemailer = require("nodemailer");
@@ -66,6 +68,6 @@ app.get("/", (req, res) => {
   res.send("<h1>Everything is fine over here</h1>");
 });
 
-app.listen(4000, () => {
-  console.log(`App is running on Port : 4000`);
+app.listen(PORT, () => {
+  console.log(`App is running on Port : ${PORT}`);
 });
